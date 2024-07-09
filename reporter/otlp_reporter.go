@@ -66,6 +66,7 @@ type traceFramesCounts struct {
 	mappingFileOffsets []uint64
 	comm               string
 	podName            string
+	podNamespace       string
 	containerName      string
 	apmServiceName     string
 	timestamps         []uint64 // in nanoseconds
@@ -122,7 +123,7 @@ func (r *OTLPReporter) SupportsReportTraceEvent() bool { return true }
 
 // ReportTraceEvent enqueues reported trace events for the OTLP reporter.
 func (r *OTLPReporter) ReportTraceEvent(trace *libpf.Trace,
-	timestamp libpf.UnixTime64, comm, podName,
+	timestamp libpf.UnixTime64, comm, podName, podNamespace,
 	containerName, apmServiceName string) {
 	traceEvents := r.traceEvents.WLock()
 	defer r.traceEvents.WUnlock(&traceEvents)
@@ -142,6 +143,7 @@ func (r *OTLPReporter) ReportTraceEvent(trace *libpf.Trace,
 		mappingFileOffsets: trace.MappingFileOffsets,
 		comm:               comm,
 		podName:            podName,
+		podNamespace:       podNamespace,
 		containerName:      containerName,
 		apmServiceName:     apmServiceName,
 		timestamps:         []uint64{uint64(timestamp)},
@@ -153,7 +155,7 @@ func (r *OTLPReporter) ReportFramesForTrace(_ *libpf.Trace) {}
 
 // ReportCountForTrace is a NOP for OTLPReporter.
 func (r *OTLPReporter) ReportCountForTrace(_ libpf.TraceHash, _ libpf.UnixTime64,
-	_ uint16, _, _, _, _ string) {
+	_ uint16, _, _, _, _, _ string) {
 }
 
 // ReportFallbackSymbol enqueues a fallback symbol for reporting, for a given frame.
@@ -698,6 +700,7 @@ func getSampleAttributes(profile *profiles.Profile, i traceFramesCounts) []uint6
 	}
 
 	addAttr(semconv.K8SPodNameKey, i.podName)
+	addAttr(semconv.K8SNamespaceNameKey, i.podNamespace)
 	addAttr(semconv.ContainerNameKey, i.containerName)
 	addAttr(semconv.ThreadNameKey, i.comm)
 	addAttr(semconv.ServiceNameKey, i.apmServiceName)

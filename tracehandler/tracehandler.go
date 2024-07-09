@@ -144,7 +144,7 @@ func (m *traceHandler) HandleTrace(bpfTrace *host.Trace) {
 			m.bpfTraceCacheHit++
 			svcName := m.traceProcessor.MaybeNotifyAPMAgent(bpfTrace, postConvHash, 1)
 			m.reporter.ReportCountForTrace(postConvHash, timestamp, 1,
-				bpfTrace.Comm, meta.PodName, meta.ContainerName, svcName)
+				bpfTrace.Comm, meta.PodName, meta.PodNamespace, meta.ContainerName, svcName)
 			return
 		}
 		m.bpfTraceCacheMiss++
@@ -158,11 +158,11 @@ func (m *traceHandler) HandleTrace(bpfTrace *host.Trace) {
 	svcName := m.traceProcessor.MaybeNotifyAPMAgent(bpfTrace, umTrace.Hash, 1)
 	if m.reporter.SupportsReportTraceEvent() {
 		m.reporter.ReportTraceEvent(umTrace, timestamp,
-			bpfTrace.Comm, meta.PodName, meta.ContainerName, svcName)
+			bpfTrace.Comm, meta.PodName, meta.PodNamespace, meta.ContainerName, svcName)
 		return
 	}
 	m.reporter.ReportCountForTrace(umTrace.Hash, timestamp, 1,
-		bpfTrace.Comm, meta.PodName, meta.ContainerName, svcName)
+		bpfTrace.Comm, meta.PodName, meta.PodNamespace, meta.ContainerName, svcName)
 
 	// Trace already known to collector by UM hash?
 	if _, known := m.umTraceCache.Get(umTrace.Hash); known {
