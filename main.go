@@ -208,6 +208,7 @@ func mainWithExitCode() exitCode {
 		KernelVersion:          hostMetadataMap[hostmeta.KeyKernelVersion],
 		ProbabilisticInterval:  args.probabilisticInterval,
 		ProbabilisticThreshold: args.probabilisticThreshold,
+		HostID:                 environment.HostID(),
 	}
 	if err = config.SetConfiguration(&conf); err != nil {
 		return failure("Failed to set configuration: %v", err)
