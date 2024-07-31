@@ -567,7 +567,7 @@ func loadUnwinders(coll *cebpf.CollectionSpec, ebpfProgs map[string]*cebpf.Progr
 					log.Error(s)
 				}
 				return fmt.Errorf("failed to load %s", unwindProg.name)
-			} 
+			}
 			scanner := bufio.NewScanner(strings.NewReader(err.Error()))
 			for scanner.Scan() {
 				log.Error(scanner.Text())
