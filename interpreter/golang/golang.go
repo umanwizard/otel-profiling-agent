@@ -24,7 +24,7 @@ type data struct {
 }
 
 func (d data) Attach(ebpf interpreter.EbpfHandler, pid util.PID,
-	bias libpf.Address, rm remotememory.RemoteMemory) (interpreter.Instance, error) {
+	_ libpf.Address, _ remotememory.RemoteMemory) (interpreter.Instance, error) {
 
 	if err := ebpf.UpdateProcData(libpf.Go, pid, unsafe.Pointer(&d.offsets)); err != nil {
 		return nil, err
@@ -43,7 +43,7 @@ func Loader(_ interpreter.EbpfHandler, info *interpreter.LoaderInfo) (interprete
 		return nil, err
 	}
 	goVersion, err := ReadGoVersion(file)
-	if errors.Is(err, NoGoVersion) {
+	if errors.Is(err, ErrNoGoVersion) {
 		log.Debugf("file %s is not a Go binary", info.FileName())
 		return nil, nil
 	}
@@ -54,7 +54,7 @@ func Loader(_ interpreter.EbpfHandler, info *interpreter.LoaderInfo) (interprete
 
 	offsets, ok := allOffsets[goVersion]
 	if !ok {
-		return nil, fmt.Errorf("No offsets found for go version %s", goVersion)
+		return nil, fmt.Errorf("no offsets found for go version %s", goVersion)
 	}
 
 	return data{

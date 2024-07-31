@@ -22,7 +22,7 @@ func getVersionSection(f *pfelf.File) io.ReaderAt {
 	return nil
 }
 
-var NoGoVersion = errors.New("go version not found")
+var ErrNoGoVersion = errors.New("go version not found")
 var buildInfoMagic = []byte("\xff Go buildinf:")
 
 // readBuildInfo reads build info, failing if it's not
@@ -50,7 +50,7 @@ func readBuildInfo(s io.ReaderAt) ([]byte, error) {
 		}
 		data = data[(i+buildInfoAlign-1)&^(buildInfoAlign-1):]
 	}
-	return nil, NoGoVersion
+	return nil, ErrNoGoVersion
 }
 
 func decodeString(data []byte) string {
@@ -62,7 +62,8 @@ func decodeString(data []byte) string {
 }
 
 // readString returns the string at address addr in the executable x.
-func readString(x *pfelf.File, ptrSize int, readPtr func([]byte) uint64, addr uint64) (string, error) {
+func readString(x *pfelf.File, ptrSize int,
+	readPtr func([]byte) uint64, addr uint64) (string, error) {
 	buf := make([]byte, 2*ptrSize)
 	n, err := x.ReadAt(buf, int64(addr))
 	if err != nil {
@@ -75,7 +76,7 @@ func readString(x *pfelf.File, ptrSize int, readPtr func([]byte) uint64, addr ui
 	dataLen := readPtr(buf[ptrSize:])
 	const maxSize = 64 // implausible that a Go version string is bigger than this
 	if dataLen > maxSize {
-		return "", NoGoVersion
+		return "", ErrNoGoVersion
 	}
 	buf = make([]byte, dataLen)
 	n, err = x.ReadAt(buf, int64(dataAddr))
@@ -95,7 +96,7 @@ func readString(x *pfelf.File, ptrSize int, readPtr func([]byte) uint64, addr ui
 func ReadGoVersion(f *pfelf.File) (string, error) {
 	vs := getVersionSection(f)
 	if vs == nil {
-		return "", NoGoVersion
+		return "", ErrNoGoVersion
 	}
 	data, err := readBuildInfo(vs)
 	if err != nil {
@@ -119,7 +120,7 @@ func ReadGoVersion(f *pfelf.File) (string, error) {
 		} else if ptrSize == 8 {
 			readPtr = bo.Uint64
 		} else {
-			return "", NoGoVersion
+			return "", ErrNoGoVersion
 		}
 		vers, err = readString(f, ptrSize, readPtr, readPtr(data[16:]))
 		if err != nil {
