@@ -217,9 +217,9 @@ func (pm *ProcessManager) ConvertTrace(trace *host.Trace) (newTrace *libpf.Trace
 	traceLen := len(trace.Frames)
 
 	newTrace = &libpf.Trace{
-		Files:      make([]libpf.FileID, 0, traceLen),
-		Linenos:    make([]libpf.AddressOrLineno, 0, traceLen),
-		FrameTypes: make([]libpf.FrameType, 0, traceLen),
+		Files:        make([]libpf.FileID, 0, traceLen),
+		Linenos:      make([]libpf.AddressOrLineno, 0, traceLen),
+		FrameTypes:   make([]libpf.FrameType, 0, traceLen),
 		CustomLabels: trace.CustomLabels,
 	}
 

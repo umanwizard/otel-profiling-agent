@@ -562,7 +562,7 @@ func loadUnwinders(coll *cebpf.CollectionSpec, ebpfProgs map[string]*cebpf.Progr
 		if err != nil {
 			// These errors tend to have hundreds of lines, so we print each line individually.
 			if err2, ok := err.(*cebpf.VerifierError); ok {
-				for _, s := range(err2.Log) {
+				for _, s := range err2.Log {
 					log.Error(s)
 				}
 				return fmt.Errorf("failed to load %s", unwindProg.name)
