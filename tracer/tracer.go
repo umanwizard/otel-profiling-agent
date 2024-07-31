@@ -230,7 +230,8 @@ func calcFallbackModuleID(moduleSym libpf.Symbol, kernelSymbols *libpf.SymbolMap
 
 // NewTracer loads eBPF code and map definitions from the ELF module at the configured path.
 func NewTracer(ctx context.Context, rep reporter.SymbolReporter, intervals Intervals,
-	includeTracers config.IncludedTracers, filterErrorFrames bool, collectCustomLabels bool) (*Tracer, error) {
+	includeTracers config.IncludedTracers, filterErrorFrames bool,
+	collectCustomLabels bool) (*Tracer, error) {
 	kernelSymbols, err := proc.GetKallsyms("/proc/kallsyms")
 	if err != nil {
 		return nil, fmt.Errorf("failed to read kernel symbols: %v", err)
@@ -566,13 +567,12 @@ func loadUnwinders(coll *cebpf.CollectionSpec, ebpfProgs map[string]*cebpf.Progr
 					log.Error(s)
 				}
 				return fmt.Errorf("failed to load %s", unwindProg.name)
-			} else {
-				scanner := bufio.NewScanner(strings.NewReader(err.Error()))
-				for scanner.Scan() {
-					log.Error(scanner.Text())
-				}
-				return fmt.Errorf("failed to load %s", unwindProg.name)
+			} 
+			scanner := bufio.NewScanner(strings.NewReader(err.Error()))
+			for scanner.Scan() {
+				log.Error(scanner.Text())
 			}
+			return fmt.Errorf("failed to load %s", unwindProg.name)
 		}
 
 		ebpfProgs[unwindProg.name] = unwinder
@@ -892,7 +892,9 @@ func (t *Tracer) loadBpfTrace(raw []byte) *host.Trace {
 	if ptr.custom_labels_hash != 0 {
 		var lbls C.CustomLabelsArray
 
-		if err := t.ebpfMaps["custom_labels"].Lookup(unsafe.Pointer(&ptr.custom_labels_hash), unsafe.Pointer(&lbls)); err != nil {
+		if err := t.ebpfMaps["custom_labels"].Lookup(
+			unsafe.Pointer(&ptr.custom_labels_hash), unsafe.Pointer(&lbls),
+		); err != nil {
 			log.Warnf("Failed to read custom labels: %v", err)
 		}
 

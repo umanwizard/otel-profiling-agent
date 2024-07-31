@@ -233,7 +233,9 @@ func GetHandler(ctx context.Context, monitorInterval time.Duration) (Handler, er
 // for the allocatable information of the nodes.
 func getPodsPerNode(ctx context.Context, instance *handler) (int, error) {
 	instance.kubernetesClientQueryCount.Add(1)
-	node, err := instance.kubeClientSet.CoreV1().Nodes().Get(ctx, instance.nodeName, v1.GetOptions{})
+	node, err := instance.kubeClientSet.CoreV1().Nodes().Get(
+		ctx, instance.nodeName, v1.GetOptions{},
+	)
 	if err != nil {
 		return 0, fmt.Errorf("failed to get kubernetes nodes for '%s': %v",
 			instance.nodeName, err)

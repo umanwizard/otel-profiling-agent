@@ -68,7 +68,8 @@ var (
 // implementation.
 func New(ctx context.Context, includeTracers config.IncludedTracers, monitorInterval time.Duration,
 	ebpf pmebpf.EbpfHandler, fileIDMapper FileIDMapper, symbolReporter reporter.SymbolReporter,
-	sdp nativeunwind.StackDeltaProvider, filterErrorFrames bool, collectCustomLabels bool) (*ProcessManager, error) {
+	sdp nativeunwind.StackDeltaProvider, filterErrorFrames bool,
+	collectCustomLabels bool) (*ProcessManager, error) {
 	if fileIDMapper == nil {
 		var err error
 		fileIDMapper, err = newFileIDMapper(lruFileIDCacheSize)
