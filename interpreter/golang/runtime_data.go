@@ -5,7 +5,7 @@ package golang
 import "C"
 
 var allOffsets = map[string]C.GoCustomLabelsOffsets{
-	"go1.11": C.GoCustomLabelsOffsets{
+	"go1.11": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -13,7 +13,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.11.1": C.GoCustomLabelsOffsets{
+	"go1.11.1": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -21,7 +21,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.11.2": C.GoCustomLabelsOffsets{
+	"go1.11.2": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -29,7 +29,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.11.3": C.GoCustomLabelsOffsets{
+	"go1.11.3": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -37,7 +37,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.11.4": C.GoCustomLabelsOffsets{
+	"go1.11.4": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -45,7 +45,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.11.5": C.GoCustomLabelsOffsets{
+	"go1.11.5": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -53,7 +53,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.11.6": C.GoCustomLabelsOffsets{
+	"go1.11.6": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -61,7 +61,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.11.7": C.GoCustomLabelsOffsets{
+	"go1.11.7": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -69,7 +69,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.11.8": C.GoCustomLabelsOffsets{
+	"go1.11.8": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -77,7 +77,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.11.9": C.GoCustomLabelsOffsets{
+	"go1.11.9": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -85,7 +85,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.11.10": C.GoCustomLabelsOffsets{
+	"go1.11.10": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -93,7 +93,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.11.11": C.GoCustomLabelsOffsets{
+	"go1.11.11": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -101,7 +101,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.11.12": C.GoCustomLabelsOffsets{
+	"go1.11.12": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -109,7 +109,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.11.13": C.GoCustomLabelsOffsets{
+	"go1.11.13": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -117,7 +117,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12": C.GoCustomLabelsOffsets{
+	"go1.12": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -125,7 +125,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.1": C.GoCustomLabelsOffsets{
+	"go1.12.1": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -133,7 +133,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.2": C.GoCustomLabelsOffsets{
+	"go1.12.2": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -141,7 +141,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.3": C.GoCustomLabelsOffsets{
+	"go1.12.3": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -149,7 +149,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.4": C.GoCustomLabelsOffsets{
+	"go1.12.4": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -157,7 +157,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.5": C.GoCustomLabelsOffsets{
+	"go1.12.5": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -165,7 +165,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.6": C.GoCustomLabelsOffsets{
+	"go1.12.6": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -173,7 +173,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.7": C.GoCustomLabelsOffsets{
+	"go1.12.7": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -181,7 +181,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.8": C.GoCustomLabelsOffsets{
+	"go1.12.8": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -189,7 +189,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.9": C.GoCustomLabelsOffsets{
+	"go1.12.9": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -197,7 +197,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.10": C.GoCustomLabelsOffsets{
+	"go1.12.10": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -205,7 +205,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.11": C.GoCustomLabelsOffsets{
+	"go1.12.11": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -213,7 +213,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.12": C.GoCustomLabelsOffsets{
+	"go1.12.12": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -221,7 +221,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.13": C.GoCustomLabelsOffsets{
+	"go1.12.13": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -229,7 +229,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.14": C.GoCustomLabelsOffsets{
+	"go1.12.14": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -237,7 +237,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.15": C.GoCustomLabelsOffsets{
+	"go1.12.15": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -245,7 +245,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.16": C.GoCustomLabelsOffsets{
+	"go1.12.16": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -253,7 +253,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.12.17": C.GoCustomLabelsOffsets{
+	"go1.12.17": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -261,7 +261,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13": C.GoCustomLabelsOffsets{
+	"go1.13": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -269,7 +269,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13.1": C.GoCustomLabelsOffsets{
+	"go1.13.1": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -277,7 +277,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13.2": C.GoCustomLabelsOffsets{
+	"go1.13.2": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -285,7 +285,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13.3": C.GoCustomLabelsOffsets{
+	"go1.13.3": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -293,7 +293,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13.4": C.GoCustomLabelsOffsets{
+	"go1.13.4": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -301,7 +301,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13.5": C.GoCustomLabelsOffsets{
+	"go1.13.5": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -309,7 +309,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13.6": C.GoCustomLabelsOffsets{
+	"go1.13.6": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -317,7 +317,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13.7": C.GoCustomLabelsOffsets{
+	"go1.13.7": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -325,7 +325,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13.8": C.GoCustomLabelsOffsets{
+	"go1.13.8": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -333,7 +333,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13.9": C.GoCustomLabelsOffsets{
+	"go1.13.9": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -341,7 +341,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13.10": C.GoCustomLabelsOffsets{
+	"go1.13.10": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -349,7 +349,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13.11": C.GoCustomLabelsOffsets{
+	"go1.13.11": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -357,7 +357,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13.12": C.GoCustomLabelsOffsets{
+	"go1.13.12": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -365,7 +365,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13.13": C.GoCustomLabelsOffsets{
+	"go1.13.13": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -373,7 +373,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13.14": C.GoCustomLabelsOffsets{
+	"go1.13.14": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -381,7 +381,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.13.15": C.GoCustomLabelsOffsets{
+	"go1.13.15": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -389,7 +389,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14": C.GoCustomLabelsOffsets{
+	"go1.14": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -397,7 +397,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14.1": C.GoCustomLabelsOffsets{
+	"go1.14.1": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -405,7 +405,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14.2": C.GoCustomLabelsOffsets{
+	"go1.14.2": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -413,7 +413,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14.3": C.GoCustomLabelsOffsets{
+	"go1.14.3": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -421,7 +421,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14.4": C.GoCustomLabelsOffsets{
+	"go1.14.4": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -429,7 +429,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14.5": C.GoCustomLabelsOffsets{
+	"go1.14.5": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -437,7 +437,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14.6": C.GoCustomLabelsOffsets{
+	"go1.14.6": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -445,7 +445,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14.7": C.GoCustomLabelsOffsets{
+	"go1.14.7": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -453,7 +453,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14.8": C.GoCustomLabelsOffsets{
+	"go1.14.8": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -461,7 +461,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14.9": C.GoCustomLabelsOffsets{
+	"go1.14.9": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -469,7 +469,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14.10": C.GoCustomLabelsOffsets{
+	"go1.14.10": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -477,7 +477,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14.11": C.GoCustomLabelsOffsets{
+	"go1.14.11": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -485,7 +485,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14.12": C.GoCustomLabelsOffsets{
+	"go1.14.12": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -493,7 +493,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14.13": C.GoCustomLabelsOffsets{
+	"go1.14.13": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -501,7 +501,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14.14": C.GoCustomLabelsOffsets{
+	"go1.14.14": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -509,7 +509,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.14.15": C.GoCustomLabelsOffsets{
+	"go1.14.15": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -517,7 +517,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15": C.GoCustomLabelsOffsets{
+	"go1.15": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -525,7 +525,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15.1": C.GoCustomLabelsOffsets{
+	"go1.15.1": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -533,7 +533,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15.2": C.GoCustomLabelsOffsets{
+	"go1.15.2": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -541,7 +541,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15.3": C.GoCustomLabelsOffsets{
+	"go1.15.3": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -549,7 +549,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15.4": C.GoCustomLabelsOffsets{
+	"go1.15.4": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -557,7 +557,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15.5": C.GoCustomLabelsOffsets{
+	"go1.15.5": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -565,7 +565,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15.6": C.GoCustomLabelsOffsets{
+	"go1.15.6": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -573,7 +573,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15.7": C.GoCustomLabelsOffsets{
+	"go1.15.7": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -581,7 +581,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15.8": C.GoCustomLabelsOffsets{
+	"go1.15.8": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -589,7 +589,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15.9": C.GoCustomLabelsOffsets{
+	"go1.15.9": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -597,7 +597,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15.10": C.GoCustomLabelsOffsets{
+	"go1.15.10": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -605,7 +605,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15.11": C.GoCustomLabelsOffsets{
+	"go1.15.11": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -613,7 +613,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15.12": C.GoCustomLabelsOffsets{
+	"go1.15.12": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -621,7 +621,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15.13": C.GoCustomLabelsOffsets{
+	"go1.15.13": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -629,7 +629,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15.14": C.GoCustomLabelsOffsets{
+	"go1.15.14": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -637,7 +637,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.15.15": C.GoCustomLabelsOffsets{
+	"go1.15.15": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -645,7 +645,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16": C.GoCustomLabelsOffsets{
+	"go1.16": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -653,7 +653,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16.1": C.GoCustomLabelsOffsets{
+	"go1.16.1": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -661,7 +661,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16.2": C.GoCustomLabelsOffsets{
+	"go1.16.2": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -669,7 +669,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16.3": C.GoCustomLabelsOffsets{
+	"go1.16.3": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -677,7 +677,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16.4": C.GoCustomLabelsOffsets{
+	"go1.16.4": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -685,7 +685,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16.5": C.GoCustomLabelsOffsets{
+	"go1.16.5": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -693,7 +693,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16.6": C.GoCustomLabelsOffsets{
+	"go1.16.6": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -701,7 +701,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16.7": C.GoCustomLabelsOffsets{
+	"go1.16.7": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -709,7 +709,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16.8": C.GoCustomLabelsOffsets{
+	"go1.16.8": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -717,7 +717,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16.9": C.GoCustomLabelsOffsets{
+	"go1.16.9": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -725,7 +725,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16.10": C.GoCustomLabelsOffsets{
+	"go1.16.10": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -733,7 +733,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16.11": C.GoCustomLabelsOffsets{
+	"go1.16.11": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -741,7 +741,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16.12": C.GoCustomLabelsOffsets{
+	"go1.16.12": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -749,7 +749,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16.13": C.GoCustomLabelsOffsets{
+	"go1.16.13": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -757,7 +757,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16.14": C.GoCustomLabelsOffsets{
+	"go1.16.14": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -765,7 +765,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.16.15": C.GoCustomLabelsOffsets{
+	"go1.16.15": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -773,7 +773,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.17": C.GoCustomLabelsOffsets{
+	"go1.17": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -781,7 +781,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.17.1": C.GoCustomLabelsOffsets{
+	"go1.17.1": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -789,7 +789,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.17.2": C.GoCustomLabelsOffsets{
+	"go1.17.2": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -797,7 +797,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.17.3": C.GoCustomLabelsOffsets{
+	"go1.17.3": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -805,7 +805,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.17.4": C.GoCustomLabelsOffsets{
+	"go1.17.4": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -813,7 +813,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.17.5": C.GoCustomLabelsOffsets{
+	"go1.17.5": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -821,7 +821,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.17.6": C.GoCustomLabelsOffsets{
+	"go1.17.6": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -829,7 +829,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.17.7": C.GoCustomLabelsOffsets{
+	"go1.17.7": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -837,7 +837,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.17.8": C.GoCustomLabelsOffsets{
+	"go1.17.8": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -845,7 +845,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.17.9": C.GoCustomLabelsOffsets{
+	"go1.17.9": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -853,7 +853,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.17.10": C.GoCustomLabelsOffsets{
+	"go1.17.10": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -861,7 +861,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.17.11": C.GoCustomLabelsOffsets{
+	"go1.17.11": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -869,7 +869,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.17.12": C.GoCustomLabelsOffsets{
+	"go1.17.12": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -877,7 +877,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.17.13": C.GoCustomLabelsOffsets{
+	"go1.17.13": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -885,7 +885,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.18": C.GoCustomLabelsOffsets{
+	"go1.18": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -893,7 +893,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.18.1": C.GoCustomLabelsOffsets{
+	"go1.18.1": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -901,7 +901,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.18.2": C.GoCustomLabelsOffsets{
+	"go1.18.2": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -909,7 +909,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.18.3": C.GoCustomLabelsOffsets{
+	"go1.18.3": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -917,7 +917,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.18.4": C.GoCustomLabelsOffsets{
+	"go1.18.4": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -925,7 +925,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.18.5": C.GoCustomLabelsOffsets{
+	"go1.18.5": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -933,7 +933,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.18.6": C.GoCustomLabelsOffsets{
+	"go1.18.6": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -941,7 +941,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.18.7": C.GoCustomLabelsOffsets{
+	"go1.18.7": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -949,7 +949,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.18.8": C.GoCustomLabelsOffsets{
+	"go1.18.8": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -957,7 +957,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.18.9": C.GoCustomLabelsOffsets{
+	"go1.18.9": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -965,7 +965,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.18.10": C.GoCustomLabelsOffsets{
+	"go1.18.10": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -973,7 +973,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.19": C.GoCustomLabelsOffsets{
+	"go1.19": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -981,7 +981,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.19.1": C.GoCustomLabelsOffsets{
+	"go1.19.1": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -989,7 +989,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.19.2": C.GoCustomLabelsOffsets{
+	"go1.19.2": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -997,7 +997,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.19.3": C.GoCustomLabelsOffsets{
+	"go1.19.3": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1005,7 +1005,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.19.4": C.GoCustomLabelsOffsets{
+	"go1.19.4": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1013,7 +1013,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.19.5": C.GoCustomLabelsOffsets{
+	"go1.19.5": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1021,7 +1021,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.19.6": C.GoCustomLabelsOffsets{
+	"go1.19.6": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1029,7 +1029,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.19.7": C.GoCustomLabelsOffsets{
+	"go1.19.7": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1037,7 +1037,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.19.8": C.GoCustomLabelsOffsets{
+	"go1.19.8": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1045,7 +1045,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.19.9": C.GoCustomLabelsOffsets{
+	"go1.19.9": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1053,7 +1053,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.19.10": C.GoCustomLabelsOffsets{
+	"go1.19.10": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1061,7 +1061,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.19.11": C.GoCustomLabelsOffsets{
+	"go1.19.11": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1069,7 +1069,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.19.12": C.GoCustomLabelsOffsets{
+	"go1.19.12": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1077,7 +1077,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.19.13": C.GoCustomLabelsOffsets{
+	"go1.19.13": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1085,7 +1085,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.20": C.GoCustomLabelsOffsets{
+	"go1.20": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1093,7 +1093,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.20.1": C.GoCustomLabelsOffsets{
+	"go1.20.1": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1101,7 +1101,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.20.2": C.GoCustomLabelsOffsets{
+	"go1.20.2": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1109,7 +1109,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.20.3": C.GoCustomLabelsOffsets{
+	"go1.20.3": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1117,7 +1117,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.20.4": C.GoCustomLabelsOffsets{
+	"go1.20.4": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1125,7 +1125,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.20.5": C.GoCustomLabelsOffsets{
+	"go1.20.5": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1133,7 +1133,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.20.6": C.GoCustomLabelsOffsets{
+	"go1.20.6": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1141,7 +1141,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.20.7": C.GoCustomLabelsOffsets{
+	"go1.20.7": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1149,7 +1149,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.20.8": C.GoCustomLabelsOffsets{
+	"go1.20.8": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1157,7 +1157,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.20.9": C.GoCustomLabelsOffsets{
+	"go1.20.9": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1165,7 +1165,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.20.10": C.GoCustomLabelsOffsets{
+	"go1.20.10": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1173,7 +1173,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.20.11": C.GoCustomLabelsOffsets{
+	"go1.20.11": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1181,7 +1181,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.20.12": C.GoCustomLabelsOffsets{
+	"go1.20.12": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1189,7 +1189,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.20.13": C.GoCustomLabelsOffsets{
+	"go1.20.13": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1197,7 +1197,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.20.14": C.GoCustomLabelsOffsets{
+	"go1.20.14": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 360,
@@ -1205,7 +1205,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.21.0": C.GoCustomLabelsOffsets{
+	"go1.21.0": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1213,7 +1213,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.21.1": C.GoCustomLabelsOffsets{
+	"go1.21.1": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1221,7 +1221,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.21.2": C.GoCustomLabelsOffsets{
+	"go1.21.2": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1229,7 +1229,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.21.3": C.GoCustomLabelsOffsets{
+	"go1.21.3": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1237,7 +1237,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.21.4": C.GoCustomLabelsOffsets{
+	"go1.21.4": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1245,7 +1245,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.21.5": C.GoCustomLabelsOffsets{
+	"go1.21.5": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1253,7 +1253,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.21.6": C.GoCustomLabelsOffsets{
+	"go1.21.6": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1261,7 +1261,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.21.7": C.GoCustomLabelsOffsets{
+	"go1.21.7": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1269,7 +1269,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.21.8": C.GoCustomLabelsOffsets{
+	"go1.21.8": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1277,7 +1277,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.21.9": C.GoCustomLabelsOffsets{
+	"go1.21.9": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1285,7 +1285,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.21.10": C.GoCustomLabelsOffsets{
+	"go1.21.10": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1293,7 +1293,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.21.11": C.GoCustomLabelsOffsets{
+	"go1.21.11": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1301,7 +1301,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.21.12": C.GoCustomLabelsOffsets{
+	"go1.21.12": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1309,7 +1309,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.22.0": C.GoCustomLabelsOffsets{
+	"go1.22.0": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1317,7 +1317,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.22.1": C.GoCustomLabelsOffsets{
+	"go1.22.1": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1325,7 +1325,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.22.2": C.GoCustomLabelsOffsets{
+	"go1.22.2": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1333,7 +1333,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.22.3": C.GoCustomLabelsOffsets{
+	"go1.22.3": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1341,7 +1341,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.22.4": C.GoCustomLabelsOffsets{
+	"go1.22.4": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,
@@ -1349,7 +1349,7 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
-	"go1.22.5": C.GoCustomLabelsOffsets{
+	"go1.22.5": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 344,

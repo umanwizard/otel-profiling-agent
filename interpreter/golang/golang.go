@@ -59,6 +59,6 @@ func Loader(_ interpreter.EbpfHandler, info *interpreter.LoaderInfo) (interprete
 
 	return data{
 		goVersion: goVersion,
-		offsets: offsets,
+		offsets:   offsets,
 	}, nil
 }

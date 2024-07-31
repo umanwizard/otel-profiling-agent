@@ -48,7 +48,7 @@ func readBuildInfo(s io.ReaderAt) ([]byte, error) {
 			data = data[i:]
 			return data, nil
 		}
-		data = data[(i + buildInfoAlign - 1) &^ (buildInfoAlign - 1):]
+		data = data[(i+buildInfoAlign-1)&^(buildInfoAlign-1):]
 	}
 	return nil, NoGoVersion
 }
