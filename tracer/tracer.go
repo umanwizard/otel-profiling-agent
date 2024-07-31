@@ -230,7 +230,7 @@ func calcFallbackModuleID(moduleSym libpf.Symbol, kernelSymbols *libpf.SymbolMap
 
 // NewTracer loads eBPF code and map definitions from the ELF module at the configured path.
 func NewTracer(ctx context.Context, rep reporter.SymbolReporter, intervals Intervals,
-	includeTracers config.IncludedTracers, filterErrorFrames bool) (*Tracer, error) {
+	includeTracers config.IncludedTracers, filterErrorFrames bool, collectCustomLabels bool) (*Tracer, error) {
 	kernelSymbols, err := proc.GetKallsyms("/proc/kallsyms")
 	if err != nil {
 		return nil, fmt.Errorf("failed to read kernel symbols: %v", err)
@@ -251,7 +251,7 @@ func NewTracer(ctx context.Context, rep reporter.SymbolReporter, intervals Inter
 	hasBatchOperations := ebpfHandler.SupportsGenericBatchOperations()
 
 	processManager, err := pm.New(ctx, includeTracers, intervals.MonitorInterval(), ebpfHandler,
-		nil, rep, elfunwindinfo.NewStackDeltaProvider(), filterErrorFrames)
+		nil, rep, elfunwindinfo.NewStackDeltaProvider(), filterErrorFrames, collectCustomLabels)
 	if err != nil {
 		return nil, fmt.Errorf("failed to create processManager: %v", err)
 	}
@@ -561,11 +561,18 @@ func loadUnwinders(coll *cebpf.CollectionSpec, ebpfProgs map[string]*cebpf.Progr
 			programOptions)
 		if err != nil {
 			// These errors tend to have hundreds of lines, so we print each line individually.
-			scanner := bufio.NewScanner(strings.NewReader(err.Error()))
-			for scanner.Scan() {
-				log.Error(scanner.Text())
+			if err2, ok := err.(*cebpf.VerifierError); ok {
+				for _, s := range(err2.Log) {
+					log.Error(s)
+				}
+				return fmt.Errorf("failed to load %s", unwindProg.name)
+			} else {
+				scanner := bufio.NewScanner(strings.NewReader(err.Error()))
+				for scanner.Scan() {
+					log.Error(scanner.Text())
+				}
+				return fmt.Errorf("failed to load %s", unwindProg.name)
 			}
-			return fmt.Errorf("failed to load %s", unwindProg.name)
 		}
 
 		ebpfProgs[unwindProg.name] = unwinder
@@ -879,6 +886,22 @@ func (t *Tracer) loadBpfTrace(raw []byte) *host.Trace {
 			log.Errorf("Failed to get kernel stack frames for 0x%x: %v", trace.Hash, err)
 		} else {
 			userFrameOffs = int(kstackLen)
+		}
+	}
+
+	if ptr.custom_labels_hash != 0 {
+		var lbls C.CustomLabelsArray
+
+		if err := t.ebpfMaps["custom_labels"].Lookup(unsafe.Pointer(&ptr.custom_labels_hash), unsafe.Pointer(&lbls)); err != nil {
+			log.Warnf("Failed to read custom labels: %v", err)
+		}
+
+		trace.CustomLabels = make(map[string]string, int(lbls.len))
+		for i := 0; i < int(lbls.len); i++ {
+			lbl := lbls.labels[i]
+			key := string(lbl.key[0:(lbl.key_len)])
+			val := string(lbl.val[0:(lbl.val_len)])
+			trace.CustomLabels[key] = val
 		}
 	}
 

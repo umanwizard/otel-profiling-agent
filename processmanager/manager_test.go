@@ -319,7 +319,8 @@ func TestInterpreterConvertTrace(t *testing.T) {
 				nil,
 				&symbolReporterMockup{},
 				nil,
-				true)
+				true,
+				false)
 			require.NoError(t, err)
 
 			newTrace := manager.ConvertTrace(testcase.trace)
@@ -414,7 +415,7 @@ func TestNewMapping(t *testing.T) {
 				NewMapFileIDMapper(),
 				symRepMockup,
 				&dummyProvider,
-				true)
+				true, false)
 			require.NoError(t, err)
 
 			// Replace the internal hooks for the tests. These hooks catch the
@@ -604,7 +605,7 @@ func TestProcExit(t *testing.T) {
 				NewMapFileIDMapper(),
 				repMockup,
 				&dummyProvider,
-				true)
+				true, false)
 			require.NoError(t, err)
 			defer cancel()
 

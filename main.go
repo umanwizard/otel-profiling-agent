@@ -283,7 +283,7 @@ func mainWithExitCode() exitCode {
 	defer reportermetrics.Start(mainCtx, rep, 60*time.Second)()
 
 	// Load the eBPF code and map definitions
-	trc, err := tracer.NewTracer(mainCtx, rep, times, includeTracers, !args.sendErrorFrames)
+	trc, err := tracer.NewTracer(mainCtx, rep, times, includeTracers, !args.sendErrorFrames, false)
 	if err != nil {
 		return failure("Failed to load eBPF tracer: %v", err)
 	}
