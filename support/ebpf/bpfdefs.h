@@ -18,6 +18,10 @@
   unsigned long long bpf_ktime_get_ns(void);
   int bpf_get_current_comm(void *, int);
 
+  static inline long bpf_probe_read(void *dst, int size, const void *unsafe_ptr) {
+    return -1;
+  }
+
   static inline long bpf_probe_read_user(void *buf, u32 sz, const void *ptr) {
     long __bpf_probe_read_user(u64, void *, u32, const void *);
     return __bpf_probe_read_user(__cgo_ctx->id, buf, sz, ptr);
@@ -51,6 +55,11 @@
   }
 
   static inline int bpf_get_stackid(void *ctx, bpf_map_def *map, u64 flags) {
+    return -1;
+  }
+
+  struct bpf_perf_event_data;
+  static long bpf_perf_prog_read_value(struct pt_regs *ctx, struct bpf_perf_event_value *buf, u32 buf_size) {
     return -1;
   }
 

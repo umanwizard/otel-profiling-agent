@@ -1,8 +1,8 @@
 SHELL ?= bash
 
-CLANG ?= clang-16
-LINK ?= llvm-link-16
-LLC ?= llc-16
+CLANG ?= clang
+LINK ?= llvm-link
+LLC ?= llc
 
 DEBUG_FLAGS = -DOPTI_DEBUG -g
 
