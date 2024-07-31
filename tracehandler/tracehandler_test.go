@@ -79,7 +79,7 @@ func (m *mockReporter) ReportFramesForTrace(trace *libpf.Trace) {
 }
 
 func (m *mockReporter) ReportCountForTrace(traceHash libpf.TraceHash,
-	_ libpf.UnixTime64, count uint16, _, _, _, _ string) {
+	_ libpf.UnixTime64, count uint16, _, _, _, _, _ string) {
 	m.reportedCounts = append(m.reportedCounts, reportedCount{
 		traceHash: traceHash,
 		count:     count,
