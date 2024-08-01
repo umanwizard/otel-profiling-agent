@@ -19,51 +19,63 @@ import (
 func TestReadCPUInfo(t *testing.T) {
 	info, err := readCPUInfo()
 	require.NoError(t, err)
+	assert.NotEmpty(t, info)
+	// use package 0 if it exists, otherwise pick one that does exist
+	packageId := 0
+	if _, contains := info[key(keyCPUFlags)][0]; !contains {
+		var k int = -1
+		for k = range info[key(keyCPUFlags)] {
+			break
+		}
+		if k == -1 {
+			assert.Fail(t, "flags not found for any package")
+		}
+		packageId = k
+	}
 
 	assertions := map[string]func(t *testing.T){
-		"NotEmptyOnAnyCPU": func(t *testing.T) { assert.NotEmpty(t, info) },
 		"FlagsAreSorted": func(t *testing.T) {
-			assert.Contains(t, info[key(keyCPUFlags)], 0)
+			assert.Contains(t, info[key(keyCPUFlags)], packageId)
 			assert.True(t,
-				sort.StringsAreSorted(strings.Split(info[key(keyCPUFlags)][0], ",")))
+				sort.StringsAreSorted(strings.Split(info[key(keyCPUFlags)][packageId], ",")))
 		},
 		"ThreadsPerCore": func(t *testing.T) {
-			assert.Contains(t, info[key(keyCPUThreadsPerCore)], 0)
-			assert.NotEmpty(t, info[key(keyCPUThreadsPerCore)][0])
+			assert.Contains(t, info[key(keyCPUThreadsPerCore)], packageId)
+			assert.NotEmpty(t, info[key(keyCPUThreadsPerCore)][packageId])
 		},
 		"Caches": func(t *testing.T) {
-			assert.Contains(t, info[key(keyCPUCacheL1i)], 0)
-			assert.Contains(t, info[key(keyCPUCacheL1d)], 0)
-			assert.Contains(t, info[key(keyCPUCacheL2)], 0)
-			assert.Contains(t, info[key(keyCPUCacheL3)], 0)
-			assert.NotEmpty(t, info[key(keyCPUCacheL1i)][0])
-			assert.NotEmpty(t, info[key(keyCPUCacheL1d)][0])
-			assert.NotEmpty(t, info[key(keyCPUCacheL2)][0])
-			assert.NotEmpty(t, info[key(keyCPUCacheL3)][0])
+			assert.Contains(t, info[key(keyCPUCacheL1i)], packageId)
+			assert.Contains(t, info[key(keyCPUCacheL1d)], packageId)
+			assert.Contains(t, info[key(keyCPUCacheL2)], packageId)
+			assert.Contains(t, info[key(keyCPUCacheL3)], packageId)
+			assert.NotEmpty(t, info[key(keyCPUCacheL1i)][packageId])
+			assert.NotEmpty(t, info[key(keyCPUCacheL1d)][packageId])
+			assert.NotEmpty(t, info[key(keyCPUCacheL2)][packageId])
+			assert.NotEmpty(t, info[key(keyCPUCacheL3)][packageId])
 		},
 		"CachesIsANumber": func(t *testing.T) {
-			assert.Contains(t, info[key(keyCPUCacheL1i)], 0)
-			_, err := strconv.Atoi(info[key(keyCPUCacheL1i)][0])
+			assert.Contains(t, info[key(keyCPUCacheL1i)], packageId)
+			_, err := strconv.Atoi(info[key(keyCPUCacheL1i)][packageId])
 			require.NoError(t, err)
-			assert.Contains(t, info[key(keyCPUCacheL3)], 0)
-			_, err = strconv.Atoi(info[key(keyCPUCacheL3)][0])
+			assert.Contains(t, info[key(keyCPUCacheL3)], packageId)
+			_, err = strconv.Atoi(info[key(keyCPUCacheL3)][packageId])
 			require.NoError(t, err)
 		},
 		"NumCPUs": func(t *testing.T) {
-			assert.Contains(t, info[key(keyCPUNumCPUs)], 0)
-			assert.NotEmpty(t, info[key(keyCPUNumCPUs)][0])
+			assert.Contains(t, info[key(keyCPUNumCPUs)], packageId)
+			assert.NotEmpty(t, info[key(keyCPUNumCPUs)][packageId])
 		},
 		"CoresPerSocket": func(t *testing.T) {
-			assert.Contains(t, info[key(keyCPUCoresPerSocket)], 0)
-			cps := info[key(keyCPUCoresPerSocket)][0]
+			assert.Contains(t, info[key(keyCPUCoresPerSocket)], packageId)
+			cps := info[key(keyCPUCoresPerSocket)][packageId]
 			assert.NotEmpty(t, cps)
 			i, err := strconv.Atoi(cps)
 			require.NoErrorf(t, err, "%v must be parseable as a number", cps)
 			assert.Greater(t, i, 0)
 		},
 		"OnlineCPUs": func(t *testing.T) {
-			assert.Contains(t, info[key(keyCPUOnline)], 0)
-			onlines := info[key(keyCPUOnline)][0]
+			assert.Contains(t, info[key(keyCPUOnline)], packageId)
+			onlines := info[key(keyCPUOnline)][packageId]
 			assert.NotEmpty(t, onlines)
 			ints, err := readCPURange(onlines)
 			require.NoError(t, err)
