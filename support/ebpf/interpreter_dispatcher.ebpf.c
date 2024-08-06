@@ -340,7 +340,7 @@ bool get_custom_labels(struct pt_regs *ctx, UnwindState *state, GoCustomLabelsOf
                 "bad%=: %0 = -1\n"
                 "good%=:\n"
                 : "=r"(res)
-                : "r"(lbl->val), "r"(val_len), "r"(map_value->values[i].str)
+                : "r"(lbl->val.val_bytes), "r"(val_len), "r"(map_value->values[i].str)
                   // all r0-r5 are clobbered since we make a function call.
                 : "r0", "r1", "r2", "r3", "r4", "r5", "memory"
             );
