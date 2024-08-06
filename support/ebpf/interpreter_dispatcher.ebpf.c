@@ -330,15 +330,15 @@ bool get_custom_labels(struct pt_regs *ctx, UnwindState *state, GoCustomLabelsOf
             asm volatile(
                 // Note: this branch is never taken, but we
                 // need it to appease the verifier.
-                "if %2 > " STR(CUSTOM_LABEL_MAX_VAL_LEN) " goto bad%=\n"
+                "if %2 > " STR(CUSTOM_LABEL_MAX_VAL_LEN) " goto 2f\n"
                 "r1 = %1\n"
                 "r2 = %2\n"
                 "r3 = %3\n"
                 "call 4\n"
                 "%0 = r0\n"
-                "goto good%=\n"
-                "bad%=: %0 = -1\n"
-                "good%=:\n"
+                "goto 1f\n"
+                "2f: %0 = -1\n"
+                "1f:\n"
                 : "=r"(res)
                 : "r"(lbl->val.val_bytes), "r"(val_len), "r"(map_value->values[i].str)
                   // all r0-r5 are clobbered since we make a function call.
