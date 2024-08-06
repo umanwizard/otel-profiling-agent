@@ -337,8 +337,8 @@ bool get_custom_labels(struct pt_regs *ctx, UnwindState *state, GoCustomLabelsOf
                 "call 4\n"
                 "%0 = r0\n"
                 "goto 1f\n"
-                "2f: %0 = -1\n"
-                "1f:\n"
+                "2: %0 = -1\n"
+                "1:\n"
                 : "=r"(res)
                 : "r"(lbl->val.val_bytes), "r"(val_len), "r"(map_value->values[i].str)
                   // all r0-r5 are clobbered since we make a function call.
