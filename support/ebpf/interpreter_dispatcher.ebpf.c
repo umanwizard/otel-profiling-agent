@@ -172,6 +172,10 @@ void *get_m_ptr(struct GoCustomLabelsOffsets *offs, UnwindState *state) {
 
 #define MAX_BUCKETS 8
 
+// see https://gcc.gnu.org/onlinedocs/cpp/Stringizing.html#Stringizing
+#define STR_HELPER(x) #x
+#define STR(x) STR_HELPER(x)
+
 struct GoString {
     char *str;
     s64 len;
@@ -311,11 +315,36 @@ bool get_custom_labels(struct pt_regs *ctx, UnwindState *state, GoCustomLabelsOf
                 DEBUG_PRINT("failed to read custom label: value too long");
                 continue;
             }
-            if (val_len <= CUSTOM_LABEL_MAX_VAL_LEN)
-                res = bpf_probe_read(lbl->val.val_bytes, val_len, map_value->values[i].str);
-            else
-                res = -1;
-
+            // The following assembly statement is equivalent to:
+            // if (val_len > CUSTOM_LABEL_MAX_VAL_LEN)
+            //     res = bpf_probe_read(lbl->val, val_len, map_value->values[i].str);
+            // else
+            //     res = -1;
+            //
+            // We need to write this in assembly because the verifier doesn't understand
+            // that val_len has already been bounds-checked above, apparently
+            // because clang has spilled it to the stack rather than
+            // keeping it in a register.
+          
+            // clang-format off          
+            asm volatile(
+                // Note: this branch is never taken, but we
+                // need it to appease the verifier.
+                "if %2 > " STR(CUSTOM_LABEL_MAX_VAL_LEN) " goto bad%=\n"
+                "r1 = %1\n"
+                "r2 = %2\n"
+                "r3 = %3\n"
+                "call 4\n"
+                "%0 = r0\n"
+                "goto good%=\n"
+                "bad%=: %0 = -1\n"
+                "good%=:\n"
+                : "=r"(res)
+                : "r"(lbl->val), "r"(val_len), "r"(map_value->values[i].str)
+                  // all r0-r5 are clobbered since we make a function call.
+                : "r0", "r1", "r2", "r3", "r4", "r5", "memory"
+            );
+            // clang-format on
             if (res) {
                 DEBUG_PRINT("failed to read value for custom label: %ld", res);
                 continue;
