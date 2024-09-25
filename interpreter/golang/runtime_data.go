@@ -1365,7 +1365,23 @@ var allOffsets = map[string]C.GoCustomLabelsOffsets{
 		hmap_log2_bucket_count: 9,
 		hmap_buckets:           16,
 	},
+	"go1.22.7": {
+		m_offset:               48,
+		curg:                   192,
+		labels:                 344,
+		hmap_count:             0,
+		hmap_log2_bucket_count: 9,
+		hmap_buckets:           16,
+	},
 	"go1.23.0": {
+		m_offset:               48,
+		curg:                   192,
+		labels:                 352,
+		hmap_count:             0,
+		hmap_log2_bucket_count: 9,
+		hmap_buckets:           16,
+	},
+	"go1.23.1": {
 		m_offset:               48,
 		curg:                   192,
 		labels:                 352,
