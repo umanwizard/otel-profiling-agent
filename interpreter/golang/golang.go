@@ -62,7 +62,7 @@ func Loader(_ interpreter.EbpfHandler, info *interpreter.LoaderInfo) (interprete
 	log.Debugf("file %s detected as go version %s", info.FileName(), goVersion)
 	majorMinor := goMajorMinorRegex.FindString(goVersion)
 	if majorMinor == "" {
-		return nil, fmt.Errorf("Failed to parse go version %s into goM.mm", goVersion)
+		return nil, fmt.Errorf("failed to parse go version %s into goM.mm", goVersion)
 	}
 
 	offsets, ok := allOffsets[majorMinor]
